@@ -36,11 +36,10 @@ export default function About() {
 
     emailjs
       .sendForm(
-        'service_lqw8guj',
-        'template_bt33l4e',
+        import.meta.env.VITE_COMMENT_SERVICE_ID,
+        import.meta.env.VITE_COMMENT_TEMPLATE_ID,
         form.current,
-        'YXkXVpnA2Yf4PBV_P'
-        /* 'c8mW3F8_cDLmasQSP' */
+        import.meta.env.VITE_COMMENT_PUBLIC_ID
       )
       .then(
         (result) => {

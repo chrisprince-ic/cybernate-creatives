@@ -48,11 +48,10 @@ export default function HireUsForm() {
 
     emailjs
       .sendForm(
-        'service_lqw8guj',
-        'template_owt7dhd',
+        import.meta.env.VITE_HIRE_SERVICE_ID,
+        import.meta.env.VITE_HIRE_TEMPLATE_ID,
         form.current,
-        'YXkXVpnA2Yf4PBV_P'
-        /* 'c8mW3F8_cDLmasQSP' */
+        import.meta.env.VITE_HIRE_PUBLIC_ID
       )
       .then(
         (result) => {
